@@ -2,7 +2,7 @@ package com.ktb.ssa.listener.pubsub.register.ssalistenerpubsubregisterservice;
 
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.googleapis.compute.ComputeCredential;
-import com.google.api.client.googleapis.extensions.appengine.auth.oauth2.AppIdentityCredential;
+//import com.google.api.client.googleapis.extensions.appengine.auth.oauth2.AppIdentityCredential;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.googleapis.util.Utils;
 import com.google.api.client.http.HttpRequestInitializer;
@@ -52,11 +52,11 @@ public class Test2 {
         return new Pubsub.Builder(transport, jsonFactory, initializer).build();
     }
 
-    public static Pubsub createPubsubClient_3() throws IOException {
-        GoogleCredential credential = new AppIdentityCredential.AppEngineCredentialWrapper(httpTransport, jsonFactory).createScoped(PubsubScopes.all());
-        HttpRequestInitializer initializer = new RetryHttpInitializerWrapper(credential);
-        return new Pubsub.Builder(httpTransport, jsonFactory, initializer).build();
-    }
+//    public static Pubsub createPubsubClient_3() throws IOException {
+//        GoogleCredential credential = new AppIdentityCredential.AppEngineCredentialWrapper(httpTransport, jsonFactory).createScoped(PubsubScopes.all());
+//        HttpRequestInitializer initializer = new RetryHttpInitializerWrapper(credential);
+//        return new Pubsub.Builder(httpTransport, jsonFactory, initializer).build();
+//    }
 
     public static void createPubsubClient_4() throws GeneralSecurityException, IOException {
         GoogleCredential credential = new GoogleCredential.Builder()
