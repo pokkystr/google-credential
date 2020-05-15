@@ -1,0 +1,21 @@
+rest:
+  client:
+    timeout: 10000
+google:
+  pubsub:
+    maximum:
+      pull:
+        message: 1000
+
+spring:
+  cloud:
+    gcp:
+      credentials:
+        #        scopes: http://gcp.cert/auth/pubsub, http://gcp.cert/auth/cloud-platform #https://www.googleapis.com/auth/pubsub,https://www.googleapis.com/auth/cloud-platform
+        location: file:src/main/resources/google/poc-hiperledger-5c004407fe84.json
+      project-id: poc-hiperledger #register-3c-uat
+      pubsub:
+        subscriber:
+          pull-endpoint: pigke:34512
+          executor-threads: 4 #default 4th
+          parallel-pull-count: 5 #default 1
